@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Work | Athion Studio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<style>
+.work-hero{
+  padding-bottom:42px
+}
+
+.work-hero h1{
+  max-width:850px
+}
+
+.work-intro{
+  max-width:720px
+}
+
+.project{
+  padding:76px 0
+}
+
+.project:nth-of-type(even){
+  background:transparent
+}
+
+.project-top{
+  display:flex;
+  justify-content:space-between;
+  gap:32px;
+  align-items:flex-end;
+  margin-bottom:28px
+}
+
+.project-top h2{
+  margin:7px 0 10px
+}
+
+.project-kicker{
+  color:#687083;
+  font-size:14px
+}
+
+.project-capabilities{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  justify-content:flex-end
+}
+
+.pill{
+  padding:9px 13px;
+  border:1px solid rgba(28,32,48,.12);
+  border-radius:999px;
+  background:rgba(255,255,255,.62);
+  font-size:12px;
+  font-weight:600
+}
+
+.project-feature{
+  display:grid;
+  grid-template-columns:minmax(0,1.7fr) minmax(300px,.8fr);
+  gap:24px;
+  align-items:stretch
+}
+
+.project-main-visual{
+  min-height:520px;
+  border-radius:28px;
+  overflow:hidden;
+  position:relative;
+  background:#fff
+}
+
+.project-main-visual img{
+  width:100%;
+  height:100%;
+  min-height:520px;
+  object-fit:cover;
+  display:block
+}
+
+.project-main-visual .visual-label{
+  position:absolute;
+  left:22px;
+  bottom:20px;
+  padding:10px 13px;
+  border-radius:12px;
+  background:rgba(255,255,255,.86);
+  backdrop-filter:blur(10px);
+  font-size:12px;
+  font-weight:700
+}
+
+.project-side{
+  display:flex;
+  flex-direction:column;
+  gap:18px
+}
+
+.project-copy{
+  padding:26px;
+  border-radius:24px;
+  background:#fff;
+  border:1px solid rgba(28,32,48,.08)
+}
+
+.project-copy h3{
+  margin:0 0 10px;
+  font-size:20px
+}
+
+.project-copy p{
+  margin:0;
+  color:#687083;
+  line-height:1.75
+}
+
+.project-meta{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px
+}
+
+.project-meta .meta-card{
+  padding:20px;
+  border-radius:20px
+}
+
+.meta-card strong{
+  display:block;
+  font-size:13px;
+  margin-bottom:7px
+}
+
+.meta-card span{
+  font-size:13px;
+  color:#687083;
+  line-height:1.55
+}
+
+.project-gallery{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin-top:18px
+}
+
+.gallery-image{
+  height:270px;
+  border-radius:22px;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid rgba(28,32,48,.05)
+}
+
+.gallery-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block
+}
+
+.project-footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+  margin-top:24px
+}
+
+.project-footer p{
+  margin:0;
+  color:#687083;
+  max-width:650px
+}
+
+.scope-section{
+  padding:78px 0
+}
+
+.scope-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:28px;
+  align-items:stretch
+}
+
+.scope-card{
+  padding:28px;
+  border-radius:24px;
+  display:grid;
+  grid-template-rows:18px 58px 58px auto;
+  row-gap:0;
+  min-height:250px
+}
+
+.scope-card .eyebrow{
+  min-height:18px
+}
+
+.scope-card h3{
+  margin:8px 0 0;
+  min-height:58px;
+  display:flex;
+  align-items:flex-start
+}
+
+.scope-card p{
+  color:#687083;
+  line-height:1.7;
+  margin:0;
+  min-height:58px
+}
+
+.scope-card .scope-tags{
+  margin:0;
+  padding-top:18px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  min-height:46px;
+  align-content:flex-start;
+  white-space:normal
+}
+
+.scope-tags span{
+  font-size:10px;
+  padding:7px 9px;
+  border-radius:999px;
+  background:rgba(255,255,255,.7)
+}
+
+/* Work principles */
+
+.work-chart-section{
+  padding:10px 0 82px
+}
+
+.work-chart{
+  margin-top:30px;
+  padding:30px;
+  border-radius:28px;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(28,32,48,.07);
+  backdrop-filter:blur(10px)
+}
+
+.work-chart-head{
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  align-items:flex-end;
+  margin-bottom:30px
+}
+
+.work-chart-head p{
+  max-width:560px;
+  color:#687083;
+  margin:0;
+  line-height:1.7
+}
+
+.principles-chart{
+  display:grid;
+  grid-template-columns:minmax(260px,.9fr) minmax(0,1.35fr);
+  gap:42px;
+  align-items:center
+}
+
+.principles-pie-wrap{
+  display:flex;
+  justify-content:center;
+  align-items:center
+}
+
+/* Non-numeric principles visual */
+.principles-pie{
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  position:relative;
+  background:
+    conic-gradient(
+      #d8cdfb 0deg 72deg,
+      #c7def8 72deg 144deg,
+      #f6df9a 144deg 216deg,
+      #f5d7d0 216deg 288deg,
+      #86c7f5 288deg 360deg
+    );
+  transform:scale(.55) rotate(-18deg);
+  opacity:.35;
+  transition:
+    transform 1.25s cubic-bezier(.22,.8,.22,1),
+    opacity .8s ease;
+  box-shadow:inset 0 0 0 1px rgba(28,32,48,.05)
+}
+
+.principles-pie:after{
+  content:"";
+  position:absolute;
+  inset:24%;
+  background:#f7f7f4;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(28,32,48,.06)
+}
+
+.principles-pie-center{
+  position:absolute;
+  z-index:2;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  text-align:center
+}
+
+.principles-pie-center strong{
+  font-size:16px;
+  letter-spacing:.08em
+}
+
+.principles-pie-center span{
+  font-size:10px;
+  letter-spacing:.14em;
+  color:#687083;
+  margin-top:5px
+}
+
+.work-principles.is-visible .principles-pie{
+  transform:scale(1) rotate(0deg);
+  opacity:1
+}
+
+.principles-legend{
+  display:grid;
+  gap:8px
+}
+
+.principle-row{
+  display:grid;
+  grid-template-columns:12px minmax(0,1fr);
+  gap:12px;
+  align-items:center;
+  padding:15px 16px;
+  border-radius:17px;
+  background:rgba(255,255,255,.62);
+  border:1px solid rgba(28,32,48,.055)
+}
+
+.principle-dot{
+  width:10px;
+  height:10px;
+  border-radius:50%
+}
+
+.principle-dot.p1{
+  background:#d8cdfb
+}
+
+.principle-dot.p2{
+  background:#c7def8
+}
+
+.principle-dot.p3{
+  background:#f6df9a
+}
+
+.principle-dot.p4{
+  background:#f5d7d0
+}
+
+.principle-dot.p5{
+  background:#86c7f5
+}
+
+.principle-row strong{
+  display:block;
+  font-size:13px
+}
+
+.principle-row small{
+  display:block;
+  color:#687083;
+  font-size:11px;
+  line-height:1.5;
+  margin-top:3px
+}
+
+.chart-note{
+  margin:20px 0 0;
+  color:#687083;
+  font-size:12px;
+  line-height:1.6
+}
+
+/* V1.21 — Blackthorn visual crop */
+.blackthorn-main-visual img{
+  object-position:right center
+}
+
+/* V1.22 — aligned scope cards + client-oriented Work hero visual */
+
+.work-direction-panel h3{
+  max-width:520px
+}
+
+.direction-steps{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);
+  gap:12px;
+  align-items:stretch;
+  margin-top:24px
+}
+
+.direction-step{
+  padding:16px;
+  border-radius:18px;
+  background:rgba(255,255,255,.64);
+  border:1px solid rgba(28,32,48,.07);
+  min-height:108px
+}
+
+.direction-step span{
+  display:block;
+  font-size:10px;
+  letter-spacing:.12em;
+  color:#687083;
+  margin-bottom:12px
+}
+
+.direction-step strong{
+  display:block;
+  font-size:14px;
+  line-height:1.35
+}
+
+.direction-step small{
+  display:block;
+  margin-top:6px;
+  color:#687083;
+  font-size:11px;
+  line-height:1.45
+}
+
+.direction-arrow{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#8068e8;
+  font-size:20px;
+  font-weight:700
+}
+
+.direction-result{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center;
+  margin-top:16px;
+  padding:15px 16px;
+  border-radius:18px;
+  background:rgba(216,205,251,.38);
+  border:1px solid rgba(128,104,232,.12)
+}
+
+.direction-result span{
+  font-size:10px;
+  letter-spacing:.12em;
+  font-weight:700;
+  color:#687083
+}
+
+.direction-result strong{
+  font-size:13px;
+  line-height:1.4;
+  text-align:right;
+  max-width:310px
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+  .project-feature{
+    grid-template-columns:1fr
+  }
+
+  .project-top{
+    align-items:flex-start;
+    flex-direction:column
+  }
+
+  .project-capabilities{
+    justify-content:flex-start
+  }
+
+  .scope-grid{
+    grid-template-columns:1fr
+  }
+
+  .project-main-visual,
+  .project-main-visual img{
+    min-height:390px
+  }
+
+  .principles-chart{
+    grid-template-columns:1fr
+  }
+
+  .principles-pie{
+    width:260px;
+    height:260px
+  }
+
+  .direction-steps{
+    grid-template-columns:1fr
+  }
+
+  .direction-arrow{
+    transform:rotate(90deg);
+    min-height:18px
+  }
+
+  .direction-result{
+    align-items:flex-start;
+    flex-direction:column
+  }
+
+  .direction-result strong{
+    text-align:left;
+    max-width:none
+  }
+}
+
+@media(max-width:600px){
+
+  .project{
+    padding:56px 0
+  }
+
+  .project-gallery{
+    grid-template-columns:1fr
+  }
+
+  .gallery-image{
+    height:230px
+  }
+
+  .project-meta{
+    grid-template-columns:1fr
+  }
+
+  .project-footer{
+    align-items:flex-start;
+    flex-direction:column
+  }
+
+  .work-chart-head{
+    display:block
+  }
+
+  .work-chart-head p{
+    margin-top:12px
+  }
+
+  .principles-pie{
+    width:230px;
+    height:230px
+  }
+}
+</style>
+<meta content="Explore selected digital work by Athion Studio across web development, mobile applications and digital branding." name="description"/><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><meta content="Athion Private Limited" name="author"/><meta content="#f7f7f4" name="theme-color"/><link href="https://athionstudio.com/work.html" rel="canonical"/><meta content="website" property="og:type"/><meta content="Athion Studio" property="og:site_name"/><meta content="Work | Athion Studio" property="og:title"/><meta content="Explore selected digital work by Athion Studio across web development, mobile applications and digital branding." property="og:description"/><meta content="https://athionstudio.com/work.html" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><meta content="Work | Athion Studio" name="twitter:title"/><meta content="Explore selected digital work by Athion Studio across web development, mobile applications and digital branding." name="twitter:description"/><link href="assets/favicon.ico" rel="icon" sizes="any"/>
+<link href="assets/athion-studio-favicon-32.png" rel="icon" type="image/png" sizes="32x32"/>
+<link href="assets/athion-studio-favicon-180.png" rel="apple-touch-icon" sizes="180x180"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Work","description":"Explore selected digital work by Athion Studio across web development, mobile applications and digital branding.","url":"https://athionstudio.com/work.html","isPartOf":{"@type":"WebSite","name":"Athion Studio","url":"https://athionstudio.com/"},"inLanguage":"en-IN"}</script><meta content="en_IN" property="og:locale"/><meta content="https://athionstudio.com/assets/og-image.webp" property="og:image"/>
+<meta content="image/webp" property="og:image:type"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Athion Studio — Creative technology for better digital experiences" property="og:image:alt"/><meta content="https://athionstudio.com/assets/og-image.webp" name="twitter:image"/><meta content="Athion Studio — Creative technology for better digital experiences" name="twitter:image:alt"/></head>
+<body><a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="site">
+<header class="nav wrap">
+<a class="logo" href="index.html">
+ATHION<span>STUDIO</span>
+</a>
+<nav aria-label="Primary navigation">
+<a href="index.html">Home</a>
+<a aria-current="page" class="active" href="work.html">Work</a>
+<a href="services.html">Services</a>
+<a href="studio.html">Studio</a>
+<a href="contact.html">Contact</a>
+</nav>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-toggle" type="button"><span></span><span></span><span></span></button>
+<div aria-hidden="true" class="mobile-menu" id="mobile-menu"><div class="mobile-menu-inner"><div class="mobile-menu-label">ATHION STUDIO · MENU</div><nav aria-label="Mobile navigation"><a  href="index.html">Home</a><a aria-current="page" class="active"  href="work.html">Work</a><a  href="services.html">Services</a><a  href="studio.html">Studio</a><a  href="contact.html">Contact</a></nav><a class="dark-btn mobile-menu-cta" href="contact.html">Start a project →</a></div></div>
+<a class="dark-btn nav-cta" href="contact.html">
+Start a project
+</a>
+</header>
+<main id="main-content">
+<!-- WORK HERO -->
+<section class="page-hero wrap work-hero">
+<div class="page-hero-grid">
+<div>
+<div class="eyebrow">
+Selected work · Athion Studio
+</div>
+<h1>
+We build digital experiences around real brands.
+</h1>
+<p class="work-intro">
+A look at the digital experiences, product systems and brand work we are building across three very different businesses.
+</p>
+<p class="small-note">
+Web Development · Mobile Application Development · Digital Branding
+</p>
+</div>
+<div class="page-hero-visual">
+<div class="visual-panel work-direction-panel">
+<small>
+ATHION STUDIO · CLIENT DIRECTION
+</small><h2>
+From business need → digital experience
+</h3>
+<div class="direction-steps">
+<div class="direction-step">
+<span>01</span>
+<strong>Your business</strong>
+<small>Goal · audience · challenge</small>
+</div>
+<div class="direction-arrow">→</div>
+<div class="direction-step">
+<span>02</span>
+<strong>Right direction</strong>
+<small>Strategy · design · technology</small>
+</div>
+<div class="direction-arrow">→</div>
+<div class="direction-step">
+<span>03</span>
+<strong>Built experience</strong>
+<small>Web · mobile · branding</small>
+</div>
+</div>
+<div class="direction-result">
+<span>CLIENT OUTCOME</span>
+<strong>
+A digital experience shaped around the business.
+</strong>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TEAVE -->
+<section class="project">
+<div class="wrap">
+<div class="project-top">
+<div>
+<div class="eyebrow">
+01 / 03 · Teavē
+</div>
+<div class="project-kicker">
+Curated Tea from Indian Estates
+</div>
+<h2>
+The Art of Tea
+</h2>
+<p>
+Origin, collection, product and editorial experience brought together in one digital world.
+</p>
+</div>
+<div class="project-capabilities">
+<span class="pill">
+Web Development
+</span>
+<span class="pill">
+Mobile · In development
+</span>
+</div>
+</div>
+<div class="project-feature">
+<div class="project-main-visual">
+<img alt="Teavē digital experience" decoding="async" fetchpriority="high" height="1024" loading="eager" src="assets/work/teave/home.webp" width="1536"/>
+<span class="visual-label">
+Teavē · Digital experience
+</span>
+</div>
+<div class="project-side">
+<div class="project-copy">
+<h3>
+Built around the origin of tea.
+</h3>
+<p>
+Teavē's experience moves beyond a simple catalogue. The project brings together Origin, Philosophy, Artistry, Collection and Chronicle, giving the brand a connected way to present the story and character of its teas.
+</p>
+</div>
+<div class="project-meta">
+<div class="meta-card lav">
+<strong>Product experience</strong>
+<span>
+Tea collections, individual products, tasting notes and brewing guidance.
+</span>
+</div>
+<div class="meta-card blue">
+<strong>Editorial</strong>
+<span>
+Chronicle and origin-led storytelling extend the experience beyond products.
+</span>
+</div>
+<div class="meta-card peach">
+<strong>Mobile</strong>
+<span>
+A mobile application is currently being developed as the next digital touchpoint.
+</span>
+</div>
+<div class="meta-card butter">
+<strong>Direction</strong>
+<span>
+Origin · Story · Collection · Ritual
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="project-gallery">
+<div class="gallery-image">
+<img alt="Teavē product experience" decoding="async" height="1024" loading="lazy" src="assets/work/teave/product.webp" width="1536"/>
+</div>
+<div class="gallery-image">
+<img alt="Teavē editorial experience" decoding="async" height="1024" loading="lazy" src="assets/work/teave/journal.webp" width="1536"/>
+</div>
+</div>
+<div class="project-footer">
+<p>
+One brand experience connecting where the tea comes from, what it tastes like and how it is experienced.
+</p>
+<a class="dark-btn" href="contact.html">
+Discuss a similar project →
+</a>
+</div>
+</div>
+</section>
+<!-- SPICECRAFT -->
+<section class="project">
+<div class="wrap">
+<div class="project-top">
+<div>
+<div class="eyebrow">
+02 / 03 · SpiceCraft Origins
+</div>
+<div class="project-kicker">
+Organic Spice Brand
+</div>
+<h2>
+Where Soil, Sun, and Season Shape the Art of Spices
+</h2>
+<p>
+Origin-led product experience supported by commerce and brand storytelling.
+</p>
+</div>
+<div class="project-capabilities">
+<span class="pill">
+Web Development
+</span>
+<span class="pill">
+Digital Branding
+</span>
+</div>
+</div>
+<div class="project-feature">
+<div class="project-main-visual">
+<img alt="SpiceCraft Origins digital experience" decoding="async" height="1024" loading="lazy" src="assets/work/spicecraft/origin.webp" width="1536"/>
+<span class="visual-label">
+SpiceCraft Origins · Origin experience
+</span>
+</div>
+<div class="project-side">
+<div class="project-copy">
+<h3>
+From origin to product.
+</h3>
+<p>
+The platform connects single-origin harvests, seasonal craft, purity and product discovery. The experience explains how soil, sun, time and careful handling shape each spice before it reaches the customer.
+</p>
+</div>
+<div class="project-meta">
+<div class="meta-card blue">
+<strong>Product system</strong>
+<span>
+Collections and individual spice experiences across whole, powdered and rare spices.
+</span>
+</div>
+<div class="meta-card lav">
+<strong>Purity</strong>
+<span>
+Dedicated content around testing, handling, storage and transparency.
+</span>
+</div>
+<div class="meta-card peach">
+<strong>Digital branding</strong>
+<span>
+Athion developed articles and editorial content for the brand's communication system.
+</span>
+</div>
+<div class="meta-card butter">
+<strong>Direction</strong>
+<span>
+Origin · Craft · Purity · Product
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="project-gallery">
+<div class="gallery-image">
+<img alt="SpiceCraft Origins product experience" decoding="async" height="1024" loading="lazy" src="assets/work/spicecraft/turmeric.webp" width="1536"/>
+</div>
+<div class="gallery-image">
+<img alt="SpiceCraft Origins process storytelling" decoding="async" height="1024" loading="lazy" src="assets/work/spicecraft/process.webp" width="1024"/>
+</div>
+</div>
+<div class="project-footer">
+<p>
+A digital experience where the story of the ingredient and the product experience reinforce each other.
+</p>
+<a class="dark-btn" href="contact.html">
+Discuss a similar project →
+</a>
+</div>
+</div>
+</section>
+<!-- BLACKTHORN -->
+<section class="project">
+<div class="wrap">
+<div class="project-top">
+<div>
+<div class="eyebrow">
+03 / 03 · Blackthorn &amp; Co.
+</div>
+<div class="project-kicker">
+Indian-Origin Cigar
+</div>
+<h2>
+Crafted in Silence. Remembered in Legacy.
+</h2>
+<p>
+A restrained digital experience shaped around Indian tobacco, craftsmanship and a distinct brand identity.
+</p>
+</div>
+<div class="project-capabilities">
+<span class="pill">
+Web Development
+</span>
+<span class="pill">
+Mobile · In development
+</span>
+<span class="pill">
+Digital Branding
+</span>
+</div>
+</div>
+<div class="project-feature">
+<div class="project-main-visual blackthorn-main-visual" style="background:#17151a">
+<img alt="Blackthorn &amp; Co. digital experience" decoding="async" height="1024" loading="lazy" src="assets/work/blackthorn/bg1.webp" width="1536"/>
+<span class="visual-label">
+Blackthorn &amp; Co. · Brand experience
+</span>
+</div>
+<div class="project-side">
+<div class="project-copy">
+<h3>
+Character carried through every touchpoint.
+</h3>
+<p>
+The experience moves through Indian tobacco origin, the Gentlemen Series, craft and process, and acquisition or correspondence. Its visual language is deliberately restrained and editorial.
+</p>
+</div>
+<div class="project-meta">
+<div class="meta-card peach">
+<strong>Brand experience</strong>
+<span>
+Origin, craft, product character and correspondence shaped into one narrative.
+</span>
+</div>
+<div class="meta-card lav">
+<strong>Logo system</strong>
+<span>
+Athion developed the Blackthorn &amp; Co. logo system as part of the digital branding work.
+</span>
+</div>
+<div class="meta-card blue">
+<strong>Mobile</strong>
+<span>
+A mobile application is currently being developed as an extension of the brand experience.
+</span>
+</div>
+<div class="meta-card butter">
+<strong>Direction</strong>
+<span>
+Identity · Story · Craft · Product
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="project-gallery">
+<div class="gallery-image" style="background:#17151a">
+<img alt="Blackthorn &amp; Co. logo system" decoding="async" height="1536" loading="lazy" src="assets/work/blackthorn/logo.webp" style="object-fit:contain;padding:34px" width="1024"/>
+</div>
+<div class="gallery-image" style="background:#17151a">
+<img alt="Blackthorn &amp; Co. brand visual" decoding="async" height="1024" loading="lazy" src="assets/work/blackthorn/bg1.webp" width="1536"/>
+</div>
+</div>
+<div class="project-footer">
+<p>
+Web, identity and mobile development moving in one consistent brand direction.
+</p>
+<a class="dark-btn" href="contact.html">
+Discuss a similar project →
+</a>
+</div>
+</div>
+</section>
+<!-- SCOPE -->
+<section class="scope-section">
+<div class="wrap">
+<div class="inner-head">
+<div class="eyebrow">
+Across the work
+</div>
+<h2>
+Different brands. Different digital directions.
+</h2>
+<p>
+We don't force every business into the same experience. The work changes with the brand, the audience and the problem that needs to be solved.
+</p>
+</div>
+<div class="scope-grid">
+<article class="scope-card lav">
+<div class="eyebrow">
+Teavē
+</div>
+<h3>
+Story + Product + Mobile
+</h3>
+<p>
+An origin-led tea experience extending from web into mobile.
+</p>
+<div class="scope-tags">
+<span>Web</span>
+<span>Product</span>
+<span>Editorial</span>
+<span>Mobile</span>
+</div>
+</article>
+<article class="scope-card blue">
+<div class="eyebrow">
+SpiceCraft Origins
+</div>
+<h3>
+Origin + Commerce + Content
+</h3>
+<p>
+A product-led spice experience supported by editorial brand content.
+</p>
+<div class="scope-tags">
+<span>Web</span>
+<span>Commerce</span>
+<span>Purity</span>
+<span>Articles</span>
+</div>
+</article>
+<article class="scope-card peach">
+<div class="eyebrow">
+Blackthorn &amp; Co.
+</div>
+<h3>
+Identity + Story + Mobile
+</h3>
+<p>
+A restrained brand experience extending into logo and mobile development.
+</p>
+<div class="scope-tags">
+<span>Web</span>
+<span>Branding</span>
+<span>Mobile</span>
+<span>Logo system</span>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- WORK PRINCIPLES -->
+<section class="work-chart-section">
+<div class="wrap">
+<div class="work-chart work-principles" id="workPrinciplesChart">
+<div class="work-chart-head">
+<div>
+<div class="eyebrow">
+How we work
+</div>
+<h2>
+Built on principles, not shortcuts.
+</h2>
+</div>
+<p>
+Our work is guided by a simple set of principles: understand the problem, communicate clearly, care about the details and keep improving the experience.
+</p>
+</div>
+<div class="principles-chart">
+<div class="principles-pie-wrap">
+<div aria-label="Athion working principles" class="principles-pie">
+<div class="principles-pie-center">
+<strong>
+ATHION
+</strong>
+<span>
+WORK ETHICS
+</span>
+</div>
+</div>
+</div>
+<div class="principles-legend">
+<div class="principle-row">
+<span class="principle-dot p1"></span>
+<div>
+<strong>
+Understanding
+</strong>
+<small>
+We begin with the business, audience and actual problem.
+</small>
+</div>
+</div>
+<div class="principle-row">
+<span class="principle-dot p2"></span>
+<div>
+<strong>
+Craft &amp; quality
+</strong>
+<small>
+We care about the details that make the final experience feel considered.
+</small>
+</div>
+</div>
+<div class="principle-row">
+<span class="principle-dot p3"></span>
+<div>
+<strong>
+Clarity &amp; transparency
+</strong>
+<small>
+We keep decisions, scope and communication straightforward.
+</small>
+</div>
+</div>
+<div class="principle-row">
+<span class="principle-dot p4"></span>
+<div>
+<strong>
+Collaboration
+</strong>
+<small>
+We work with clients as part of the process, not around them.
+</small>
+</div>
+</div>
+<div class="principle-row">
+<span class="principle-dot p5"></span>
+<div>
+<strong>
+Continuous improvement
+</strong>
+<small>
+We refine the experience rather than treating launch as the finish line.
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<section class="inner-section">
+<div class="cta-band">
+<div>
+<div class="eyebrow">
+Start a project
+</div>
+<h2>
+Have something worth building?
+</h2>
+<p>
+Tell us what you're working on. We'll help shape the right digital direction.
+</p>
+</div>
+<a class="dark-btn" href="contact.html">
+Start a conversation →
+</a>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="footer wrap">
+<div class="footer-main">
+<div class="footer-brand">
+<div class="logo">
+ATHION<span>STUDIO</span>
+</div>
+<p>
+A creative technology department of Athion Private Limited — building thoughtful digital experiences.
+</p>
+</div>
+<div class="footer-links">
+<div>
+<h4>
+Explore
+</h4>
+<a href="index.html">Home</a>
+<a href="work.html">Work</a>
+<a href="services.html">Services</a>
+<a href="studio.html">Studio</a>
+<a href="contact.html">Contact</a>
+</div>
+<div>
+<h4>
+Legal
+</h4>
+<a href="legal/privacy.html">
+Privacy Policy
+</a>
+<a href="legal/terms.html">
+Terms &amp; Conditions
+</a>
+<a href="legal/cookies.html">
+Cookie Policy
+</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<span>
+© 2026 Athion Private Limited. All rights reserved.
+</span>
+<span>
+Athion Studio
+</span>
+</div>
+</footer>
+</div>
+<script>
+
+(function(){
+
+const chart =
+document.getElementById('workPrinciplesChart');
+
+if(!chart) return;
+
+const reduced =
+window.matchMedia(
+'(prefers-reduced-motion: reduce)'
+).matches;
+
+if(reduced){
+
+chart.classList.add('is-visible');
+
+return;
+
+}
+
+const observer =
+new IntersectionObserver(
+entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+chart.classList.add('is-visible');
+
+observer.unobserve(chart);
+
+}
+
+});
+
+},
+{
+threshold:.25
+}
+);
+
+observer.observe(chart);
+
+})();
+
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>

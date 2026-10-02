@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Studio | Athion Studio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<style>
+/* Studio V1.36 — page content only; shared Athion grid/spacing/buttons remain inherited. */
+.studio-hero{padding:46px 42px;border-radius:30px;background:linear-gradient(135deg,#e2d8ff 0%,#cfe4f9 56%,#f4dff0 100%);overflow:hidden}
+.studio-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.studio-hero h1{font-size:clamp(48px,7vw,78px);line-height:.95;letter-spacing:-.07em;margin:0 0 20px;max-width:570px}.studio-hero h1 em{font-style:normal;color:var(--purple)}
+.studio-hero p{max-width:500px;color:#596174;line-height:1.68;font-size:17px;margin:0 0 24px}
+.studio-visual{background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.92);border-radius:26px;padding:18px;box-shadow:0 28px 60px rgba(69,66,120,.15);backdrop-filter:blur(14px)}
+.studio-visual-top{display:flex;justify-content:space-between;align-items:center;font-size:10px;font-weight:700;color:#697183;margin-bottom:16px}.studio-visual-top span:last-child{color:var(--purple)}
+.studio-map{display:grid;grid-template-columns:1fr 34px 1fr;gap:10px;align-items:center}.studio-node{border-radius:19px;padding:20px;min-height:190px;background:#f7f8fb;border:1px solid #e8e9ee}.studio-node.accent{background:linear-gradient(145deg,#e8e0ff,#e5f0fb)}.studio-node small{display:block;font-size:9px;letter-spacing:.1em;font-weight:700;color:#7a8290;margin-bottom:10px}.studio-node strong{display:block;font-size:31px;line-height:1.05;letter-spacing:-.045em}.studio-node p{font-size:14px;line-height:1.55;color:#667082;margin:16px 0 0}.studio-arrow{width:34px;height:34px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--purple);font-weight:800;box-shadow:0 7px 18px rgba(50,55,75,.08)}
+.studio-intro{display:grid;grid-template-columns:1fr 1fr;gap:16px}.studio-intro-card{background:#fff;border:1px solid #e7e8eb;border-radius:26px;padding:30px;min-height:250px}.studio-intro-card.lav{background:var(--lav);border-color:transparent}.studio-intro-card h3{font-size:31px;line-height:1.05;letter-spacing:-.045em;margin:20px 0 12px}.studio-intro-card p{font-size:16px;line-height:1.65;color:#586073;max-width:450px;margin:0}.studio-kicker{font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#6e6680}
+.studio-principles{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.studio-principle{background:#fff;border:1px solid #e7e8eb;border-radius:22px;padding:24px;min-height:210px}.studio-principle:nth-child(2){background:var(--lav);border-color:transparent}.studio-principle:nth-child(3){background:var(--blue);border-color:transparent}.studio-principle:nth-child(4){background:var(--peach);border-color:transparent}.studio-principle .num{font-size:11px;font-weight:800;color:#7c8491}.studio-principle h3{font-size:29px;line-height:1.05;letter-spacing:-.04em;margin:42px 0 10px}.studio-principle p{font-size:14px;line-height:1.55;color:#5c6473;margin:0}
+.studio-process{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative}.studio-process:before{content:"";position:absolute;left:8%;right:8%;top:27px;height:1px;background:#dfe1e6;z-index:0}.process-step{position:relative;z-index:1}.process-dot{width:55px;height:55px;border-radius:50%;background:var(--bg);border:1px solid #dfe1e6;display:grid;place-items:center;font-size:11px;font-weight:800;margin-bottom:20px}.process-step h3{font-size:29px;letter-spacing:-.035em;margin:0 0 8px}.process-step p{font-size:14px;line-height:1.55;color:var(--muted);max-width:210px;margin:0}
+.studio-quote{background:#1c2030;color:#fff;border-radius:28px;padding:38px 40px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:end}.studio-quote h2{font-size:44px;line-height:1;letter-spacing:-.055em;margin:0}.studio-quote p{font-size:15px;line-height:1.6;color:#c7ccd8;margin:13px 0 0;max-width:540px}.studio-quote-side{justify-self:end;text-align:right;color:#aeb5c4;font-size:11px;line-height:1.6}.studio-quote-side strong{display:block;color:#fff;font-size:13px;margin-bottom:5px}
+@media(max-width:860px){.studio-principles{grid-template-columns:1fr 1fr}.studio-process{grid-template-columns:1fr 1fr}.studio-process:before{display:none}}
+@media(max-width:760px){.studio-hero{padding:38px 24px}.studio-hero-grid,.studio-intro,.studio-quote{grid-template-columns:1fr}.studio-map{grid-template-columns:1fr}.studio-arrow{margin:auto;transform:rotate(90deg)}.studio-principles,.studio-process{grid-template-columns:1fr}.studio-quote{padding:30px 24px}.studio-quote-side{text-align:left;justify-self:start}}
+
+/* STUDIO V1.37 — locked to the same Home / Work / Services spacing system */
+.studio-hero{
+  max-width:1120px;
+  margin:18px auto 0;
+  padding:54px 42px 42px;
+  min-height:560px;
+}
+.studio-intro,.studio-principles,.studio-process,.studio-closing .studio-quote{
+  max-width:1000px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.studio-intro,.studio-principles,.studio-process{gap:16px}
+.studio-closing{padding-bottom:88px}
+@media(max-width:760px){
+  .studio-hero{padding:38px 24px}
+  .studio-closing{padding-bottom:64px}
+}
+
+/* STUDIO V1.38 — The Athion Method converted to a one-time animated pie chart. */
+.studio-method-chart{display:grid;grid-template-columns:360px 1fr;gap:54px;align-items:center;max-width:1000px;margin:0 auto}
+.method-pie-wrap{position:relative;width:300px;height:300px;margin:0 auto;display:grid;place-items:center}
+.method-pie{width:300px;height:300px;border-radius:50%;background:conic-gradient(#d8cdfb 0deg,#d8cdfb 0deg,#c7def8 0deg,#c7def8 0deg,#f5d7d0 0deg,#f5d7d0 0deg,#f6df9a 0deg,#f6df9a 0deg);transform:rotate(-90deg);box-shadow:0 20px 45px rgba(28,32,48,.08);opacity:.35}
+.method-pie.is-animated{opacity:1}
+.method-pie-center{position:absolute;width:116px;height:116px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(28,32,48,.08)}
+.method-pie-center strong{font-size:35px;line-height:1;letter-spacing:-.05em}
+.method-pie-center span{font-size:8px;font-weight:800;letter-spacing:.14em;color:#7b8290;margin-top:6px}
+.method-legend{display:grid;gap:13px}
+.method-item{display:grid;grid-template-columns:12px 1fr;gap:12px;align-items:start;padding:13px 0;border-bottom:1px solid #e5e6e9}
+.method-swatch{width:10px;height:10px;border-radius:50%;margin-top:4px}
+.swatch-1{background:#d8cdfb}.swatch-2{background:#c7def8}.swatch-3{background:#f5d7d0}.swatch-4{background:#f6df9a}
+.method-item b{display:block;font-size:14px;letter-spacing:-.02em}.method-item b span{font-size:9px;color:#8068e8;margin-right:7px;letter-spacing:.08em}.method-item p{font-size:12px;line-height:1.55;color:var(--muted);margin:5px 0 0;max-width:500px}
+.method-note{font-size:9px;line-height:1.5;color:#858c99;letter-spacing:.02em;margin-top:3px}
+@media(max-width:860px){.studio-method-chart{grid-template-columns:1fr;gap:34px}.method-pie-wrap{width:270px;height:270px}.method-pie{width:270px;height:270px}}
+@media(max-width:760px){.studio-method-chart{gap:28px}.method-pie-wrap{width:240px;height:240px}.method-pie{width:240px;height:240px}.method-pie-center{width:98px;height:98px}.method-pie-center strong{font-size:30px}}
+</style>
+<meta content="Meet Athion Studio, the creative technology department of Athion Private Limited, bringing strategy, design and technology together." name="description"/><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><meta content="Athion Private Limited" name="author"/><meta content="#f7f7f4" name="theme-color"/><link href="https://athionstudio.com/studio.html" rel="canonical"/><meta content="website" property="og:type"/><meta content="Athion Studio" property="og:site_name"/><meta content="Studio | Athion Studio" property="og:title"/><meta content="Meet Athion Studio, the creative technology department of Athion Private Limited, bringing strategy, design and technology together." property="og:description"/><meta content="https://athionstudio.com/studio.html" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><meta content="Studio | Athion Studio" name="twitter:title"/><meta content="Meet Athion Studio, the creative technology department of Athion Private Limited, bringing strategy, design and technology together." name="twitter:description"/><link href="assets/favicon.ico" rel="icon" sizes="any"/>
+<link href="assets/athion-studio-favicon-32.png" rel="icon" type="image/png" sizes="32x32"/>
+<link href="assets/athion-studio-favicon-180.png" rel="apple-touch-icon" sizes="180x180"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Studio","description":"Meet Athion Studio, the creative technology department of Athion Private Limited, bringing strategy, design and technology together.","url":"https://athionstudio.com/studio.html","isPartOf":{"@type":"WebSite","name":"Athion Studio","url":"https://athionstudio.com/"},"inLanguage":"en-IN"}</script><meta content="en_IN" property="og:locale"/><meta content="https://athionstudio.com/assets/og-image.webp" property="og:image"/>
+<meta content="image/webp" property="og:image:type"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Athion Studio — Creative technology for better digital experiences" property="og:image:alt"/><meta content="https://athionstudio.com/assets/og-image.webp" name="twitter:image"/><meta content="Athion Studio — Creative technology for better digital experiences" name="twitter:image:alt"/></head>
+<body><a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="site">
+<header class="nav wrap">
+<a class="logo" href="index.html">ATHION<span>STUDIO</span></a>
+<nav aria-label="Primary navigation"><a href="index.html">Home</a><a href="work.html">Work</a><a href="services.html">Services</a><a aria-current="page" class="active" href="studio.html">Studio</a><a href="contact.html">Contact</a></nav>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-toggle" type="button"><span></span><span></span><span></span></button>
+<div aria-hidden="true" class="mobile-menu" id="mobile-menu"><div class="mobile-menu-inner"><div class="mobile-menu-label">ATHION STUDIO · MENU</div><nav aria-label="Mobile navigation"><a  href="index.html">Home</a><a  href="work.html">Work</a><a  href="services.html">Services</a><a aria-current="page" class="active"  href="studio.html">Studio</a><a  href="contact.html">Contact</a></nav><a class="dark-btn mobile-menu-cta" href="contact.html">Start a project →</a></div></div>
+<a class="dark-btn nav-cta" href="contact.html">Start a project</a>
+</header>
+<main id="main-content">
+<section class="hero wrap studio-hero">
+<div class="studio-hero-grid">
+<div><div class="eyebrow">ATHION STUDIO · ABOUT</div><h1>A creative technology department built around <em>thoughtful</em> digital work.</h1><p>Athion Studio is the creative technology department of Athion Private Limited. We bring strategy, design and technology together to create digital experiences that are clear, useful and considered.</p><div class="actions"><a class="dark-btn" href="contact.html">Start a project →</a><a class="light-btn" href="work.html">See our work →</a></div></div>
+<div class="studio-visual"><div class="studio-visual-top"><span>ATHION STUDIO · HOW WE THINK</span><span>ONE DIRECTION</span></div><div class="studio-map"><div class="studio-node"><small>START WITH</small><strong>Your business</strong><p>Goals, audience, context and the problem that needs to change.</p></div><div class="studio-arrow">→</div><div class="studio-node accent"><small>SHAPE INTO</small><strong>Digital experience</strong><p>Strategy, design and technology connected around the real need.</p></div></div></div>
+</div>
+</section>
+<section class="section">
+<div class="section-head"><div><div class="eyebrow">THE STUDIO</div><h2>Not just what we build. How we think.</h2></div><p>Good digital work starts before the screen. We take time to understand what the business needs, then choose the right way to shape the experience.</p></div>
+<div class="studio-intro"><article class="studio-intro-card lav"><span class="studio-kicker">Our role</span><h3>Bring the pieces together.</h3><p>Strategy, design and technology can easily become separate conversations. Athion Studio connects them into one direction so the final experience feels coherent to the people using it.</p></article><article class="studio-intro-card"><span class="studio-kicker">Our standard</span><h3>Simple for the audience. Thoughtful behind the scenes.</h3><p>We aim for digital experiences that feel natural to use while the detail, structure and technical decisions remain carefully considered underneath.</p></article></div>
+</section>
+<section class="section">
+<div class="section-head"><div><div class="eyebrow">HOW WE WORK</div><h2>Five principles. One discipline.</h2></div><p>These principles guide the work across web, mobile application and digital branding projects.</p></div>
+<div class="studio-principles"><article class="studio-principle"><span class="num">01</span><h3>Understand first.</h3><p>We begin with the business, audience, goals and challenge before choosing a digital solution.</p></article><article class="studio-principle"><span class="num">02</span><h3>Make it clear.</h3><p>Complexity stays behind the scenes. The audience should understand what matters without working for it.</p></article><article class="studio-principle"><span class="num">03</span><h3>Design with purpose.</h3><p>Visual decisions should strengthen the message, experience and identity rather than decorate it.</p></article><article class="studio-principle"><span class="num">04</span><h3>Build for reality.</h3><p>The final work has to function in the real world, not just look considered in a presentation.</p></article></div>
+</section>
+<section class="section">
+<div class="section-head"><div><div class="eyebrow">THE ATHION METHOD</div><h2>From business need to finished experience.</h2></div><p>The exact service can change. The discipline stays consistent.</p></div>
+<div aria-label="The Athion Method shown as four equal stages" class="studio-method-chart">
+<div class="method-pie-wrap">
+<div aria-hidden="true" class="method-pie" data-method-pie=""></div>
+<div class="method-pie-center"><strong>4</strong><span>STAGES</span></div>
+</div>
+<div class="method-legend">
+<article class="method-item"><span class="method-swatch swatch-1"></span><div><b><span>01</span> Understand</b><p>Business, audience, goals and what needs to change.</p></div></article>
+<article class="method-item"><span class="method-swatch swatch-2"></span><div><b><span>02</span> Shape</b><p>Choose the right digital direction for the need.</p></div></article>
+<article class="method-item"><span class="method-swatch swatch-3"></span><div><b><span>03</span> Build</b><p>Turn the direction into a usable digital experience.</p></div></article>
+<article class="method-item"><span class="method-swatch swatch-4"></span><div><b><span>04</span> Refine</b><p>Review the details and improve before the work is finished.</p></div></article>
+<small class="method-note">Four equal stages — a method framework, not a time or effort measure.</small>
+</div>
+</div>
+</section>
+<section class="wrap studio-closing"><div class="studio-quote"><div><h2>Good work should feel clear.</h2><p>Clear to the business. Clear to the audience. Considered in the details that make the experience work.</p></div><div class="studio-quote-side"><strong>ATHION STUDIO</strong>A creative technology department of Athion Private Limited.<br/>Web · Mobile · Digital Branding</div></div></section>
+</main>
+<footer class="footer wrap"><div class="footer-main"><div class="footer-brand"><div class="logo">ATHION<span>STUDIO</span></div><p>A creative technology department of Athion Private Limited — building thoughtful digital experiences.</p></div><div class="footer-links"><div><h2>Explore</h2><a href="index.html">Home</a><a href="work.html">Work</a><a href="services.html">Services</a><a href="studio.html">Studio</a><a href="contact.html">Contact</a></div><div><h2>Legal</h2><a href="legal/privacy.html">Privacy Policy</a><a href="legal/terms.html">Terms &amp; Conditions</a><a href="legal/cookies.html">Cookie Policy</a></div></div></div><div class="footer-bottom"><span>© 2026 Athion Private Limited. All rights reserved.</span><span>Athion Studio</span></div></footer>
+</div>
+<script>
+(function(){
+  const pie=document.querySelector('[data-method-pie]');
+  if(!pie) return;
+  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const render=(p)=>{
+    const total=360*p;
+    const a=Math.min(90,total);
+    const b=Math.min(180,total);
+    const c=Math.min(270,total);
+    const d=Math.min(360,total);
+    pie.style.background=`conic-gradient(#d8cdfb 0deg ${a}deg,#c7def8 ${a}deg ${b}deg,#f5d7d0 ${b}deg ${c}deg,#f6df9a ${c}deg ${d}deg,transparent ${d}deg 360deg)`;
+  };
+  if(reduced){render(1);pie.classList.add('is-animated');return;}
+  render(0);
+  const start=()=>{
+    const duration=1500;
+    const t0=performance.now();
+    const ease=t=>1-Math.pow(1-t,3);
+    const frame=(now)=>{
+      const p=Math.min(1,(now-t0)/duration);
+      render(ease(p));
+      if(p<1) requestAnimationFrame(frame);
+      else pie.classList.add('is-animated');
+    };
+    requestAnimationFrame(frame);
+  };
+  const obs=new IntersectionObserver((entries)=>{
+    if(entries[0].isIntersecting){start();obs.disconnect();}
+  },{threshold:.35});
+  obs.observe(pie);
+})();
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>
