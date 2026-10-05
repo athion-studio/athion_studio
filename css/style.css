@@ -671,7 +671,8 @@ img{max-width:100%}
 .mobile-menu-cta{margin-top:auto;width:100%;padding:15px 18px;font-size:13px}
 body.mobile-menu-open{overflow:hidden}
 @media(max-width:760px){
-  .nav{z-index:1001}
+  /* Mobile drawer fix: backdrop-filter on the header creates a containing block for fixed descendants. */
+  .nav{z-index:1001;backdrop-filter:none;-webkit-backdrop-filter:none}
   .nav nav{display:none}
   /* Keep the mobile drawer navigation visible even though the desktop nav is hidden. */
   .nav .mobile-menu nav{display:grid}
