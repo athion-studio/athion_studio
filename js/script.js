@@ -302,8 +302,14 @@ const escapeHtml = value => String(value ?? '').replace(/[&<>\"']/g, char => ({'
     });
   };
   const animateBars = () => section.querySelectorAll('.animated-bars i').forEach((bar, index) => {
-    bar.style.height = bar.dataset.height || '10%';
+    const value = bar.dataset.height || '10%';
+    const scale = Math.max(0, Math.min(1, parseFloat(value) / 100));
+    bar.style.height = value;
+    bar.style.transform = reduceMotion ? 'scaleY(1)' : 'scaleY(0)';
     bar.style.transitionDelay = `${index * 70}ms`;
+    if (!reduceMotion) requestAnimationFrame(() => requestAnimationFrame(() => {
+      bar.style.transform = `scaleY(${scale})`;
+    }));
   });
   const animateRing = () => {
     const ring = section.querySelector('#result-ring');
