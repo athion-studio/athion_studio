@@ -671,12 +671,11 @@ img{max-width:100%}
 .mobile-menu-cta{margin-top:auto;width:100%;padding:15px 18px;font-size:13px}
 body.mobile-menu-open{overflow:hidden}
 @media(max-width:760px){
-  /* Mobile drawer fix: backdrop-filter on the header creates a containing block for fixed descendants. */
-  .nav{z-index:1001;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .nav{z-index:1001}
   .nav nav{display:none}
   /* Keep the mobile drawer navigation visible even though the desktop nav is hidden. */
   .nav .mobile-menu nav{display:grid}
-  .mobile-menu-toggle{display:flex;margin-left:auto;margin-right:8px}
+  .mobile-menu-toggle{display:none!important}
   .nav-cta{display:inline-flex}
   .mobile-menu{position:fixed;inset:0;z-index:1000;display:block;background:rgba(247,247,244,.98);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .28s ease,transform .28s ease,visibility 0s linear .28s;overflow:auto;padding-top:96px}
   .mobile-menu.is-open{opacity:1;visibility:visible;transform:none;transition-delay:0s}
